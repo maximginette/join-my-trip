@@ -1,0 +1,13 @@
+<div class="formContainer">
+  <form (submit)="handleLogin(signupForm)" #signupForm="ngForm">
+    <label for="email">Email</label> <br>
+    <input type="email" id="email" ngModel name="email" required=""> <br>
+    <label for="password">Password</label> <br>
+    <input type="password" id="password" ngModel name="password" required=""><br>
+    <div class="submitContainer">
+      <button type="submit" [disabled]="signupForm.invalid">Login</button>
+    </div>
+  </form>
+</div>
+
+

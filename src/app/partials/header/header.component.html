@@ -1,0 +1,22 @@
+<div id="header">
+  <div class="headerContainer">
+    <div class="left">
+      <img src="../../../assets/logo.png" alt="">
+    </div>
+    <div class="right">
+      <div class="menu">
+        <ul>
+          <!--<li routerLinkActive="active"><a [routerLink]="'/home'">Home</a></li>-->
+          <li routerLinkActive="active"><a routerLink="/home">Home</a></li>
+          <li *ngIf="isAuth" routerLinkActive="active"><a [routerLink]="'/create'">Create recipe</a></li>
+          <li *ngIf="isAuth" routerLinkActive="active"><a [routerLink]="'/profile'">Profile</a></li>
+          <li *ngIf="isAuth" routerLinkActive="active"><a [routerLink]="'/contact'">Contact</a></li>
+          <li *ngIf="!isAuth" routerLinkActive="active"><a [routerLink]="'/signup'">Register</a></li>
+          <li *ngIf="!isAuth" routerLinkActive="active"><a [routerLink]="'/login'">Login</a></li>
+          <li *ngIf="isAuth" (click)="logout()">Logout</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<button (click)="sensObserv()">Send</button>

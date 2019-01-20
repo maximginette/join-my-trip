@@ -1,0 +1,24 @@
+<div id="home">
+  <div class="slider">
+    <div *ngIf="slideCount === 1" class="slide slide1"></div>
+    <div *ngIf="slideCount === 2" class="slide slide2"></div>
+    <div *ngIf="slideCount === 3" class="slide slide3"></div>
+    <div *ngIf="slideCount === 4" class="slide slide4"></div>
+    <button (click)="handleSlide('prev')">Prev</button>
+    <button (click)="handleSlide('next')">Next</button>
+  </div>
+  <ng-container *ngFor="let trip of trips">
+    <div class="tripContainer">
+      <img [src]="trip['imagePath']" alt="" class="img">
+      <div class="tripInfosContainer">
+        <h3 class="title">{{trip['title']}}</h3>
+        <p class="description">{{trip['descitpion']}}</p>
+        <div class="tripInfos">
+          <span class="author">{{trip['author']}}</span>
+          <span class="date">{{trip['date']}}</span>
+        </div>
+      </div>
+      <button (click)="handleTrip(trip['_id'])">Voir plus de details</button>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,49 @@
+@import "../../../variables";
+.formContainer {
+  width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 100px 0;
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 7px;
+    border-radius: 5px;
+    border: 1px solid $greyE1;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    &:focus {
+      border: 1px solid $blue19;
+    }
+  }
+  .submitContainer {
+    display: flex;
+    justify-content: center;
+    button {
+      padding: 10px 35px;
+      background-color: $blue19;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      border: 1px solid $blue19;
+      &:disabled {
+        background-color: $green-01;
+        border: 1px solid $green-01;
+      }
+    }
+  }
+  label {
+    font-size: 20px;
+    color: $grey81;
+  }
+}
+input[type="file"] {
+  visibility: hidden;
+}
+.imagePreview {
+  img{
+    width: 200px;
+    height: 100px;
+    border: 1px solid $greyE1;
+  }
+}
